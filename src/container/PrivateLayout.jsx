@@ -1,17 +1,12 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { RenderRoutes } from "../routes";
-import { useHistory } from 'react-router-dom';
+import { RenderRoutes } from '../routes';
+
+import MainLayout from '../view/UI-kit/HOC/MainLayout';
+import { Header, Footer } from '../view/components';
 
 export default function PrivateLayout({ component: Component, ...rest }) {
-  const history = useHistory();
-
-  function handleLogout() {
-    localStorage.removeItem('user');
-    history.push('/login');
-  }
-
   if (!localStorage.getItem('user')) {
     return (
       <Redirect
@@ -23,18 +18,14 @@ export default function PrivateLayout({ component: Component, ...rest }) {
     );
   }
 
-  // return (
-  // <MainLayout>
-  // <RenderRoutes {...rest} />
-  // </MainLayout>
-  // )
-
   return (
-    <div>
+    <MainLayout
+      headerComponent={<Header />}
+      footerComponent={<Footer />}
+      asideVisible={false}
+      asidePosition="left"
+    >
       <RenderRoutes {...rest} />
-      <button  onClick={handleLogout}>
-        LogOut
-      </button>
-    </div>
-  )
+    </MainLayout>
+  );
 }

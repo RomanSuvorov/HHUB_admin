@@ -1,0 +1,40 @@
+export default {
+  queryScale: {
+    mobileS: '1em',
+    mobileM: '1.1em',
+    mobileL: '1.2em',
+    tablet: '1.4em',
+    laptop: '1.6em',
+    laptopL: '1.8em',
+    desktop: '2.4em',
+  },
+  size: {
+    h1: '1.5em',
+    h2: '1.2em',
+    h3: '1em',
+    h4: '1em',
+    h5: '1em',
+    h6: '1em',
+    subtitle1: '1.1em',
+    subtitle2: '1em',
+    body1: '1em',
+    body2: '1em',
+    button: '1em',
+    caption: '1em',
+    overline: '1em',
+  },
+  weight: {
+    'thin-100': '100',
+    'thin-200': '200',
+    'thin-300': '300',
+    'normal-400': '400',
+    'normal-500': '500',
+    'normal-600': '600',
+    'bold-700': '700',
+    'bold-800': '800',
+    'bold-900': '900',
+  },
+  family: {
+
+  },
+};
