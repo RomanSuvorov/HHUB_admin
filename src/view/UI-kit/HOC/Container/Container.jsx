@@ -9,6 +9,7 @@ export default function Container({
   fullWidth,
   noGutter,
   width,
+  styles = null,
 }) {
   const allClasses = ['container'];
 
@@ -18,6 +19,7 @@ export default function Container({
 
   return (
     <ContainerWrapper
+      styles={styles}
       id={id}
       className={allClasses.join(' ')}
       fullWidth={fullWidth}

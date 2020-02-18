@@ -2,12 +2,15 @@ import styled, { css } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const ContainerWrapper = styled.div`
-  background-color: ${themeGet('color.error')};
   margin-right: auto;
   margin-left: auto;
   width: 100%;
   box-sizing: border-box;
-  
+  ${props =>
+  props.styles && props.styles.backgroundColor &&
+  css`background-color: ${props.styles.backgroundColor}` ||
+    css`background-color: ${themeGet('color.primary')};`
+  }
   ${props =>
   props.fullWidth &&
   css`

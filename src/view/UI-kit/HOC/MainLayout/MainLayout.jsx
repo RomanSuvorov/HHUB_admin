@@ -18,7 +18,15 @@ export default function MainLayout({
   footerComponent,
   footerVisible,
   children,
+  className,
+  id,
 }) {
+  const allClasses = ['mainLayout'];
+
+  if (className) {
+    allClasses.push(className);
+  }
+
   return (
     <MainLayoutWrapper
       h1="h1"
@@ -29,6 +37,8 @@ export default function MainLayout({
       h6="h6"
       subTitle1="p"
       body1="span"
+      id={id}
+      className={allClasses.join(' ')}
     >
       {headerVisible && headerComponent}
       {navigationVisible && navigationComponent}

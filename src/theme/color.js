@@ -1,14 +1,21 @@
 export default {
-  primary: '#fff',
-  secondary: '#000',
-  background: '#ddd',
-  surface: '#fff',
+  primary: 'rgb(255, 255, 255)',
+  secondary: 'rgb(0, 0, 0)',
+  background: 'rgb(221, 221, 221)',
+  surface: 'rgb(255, 255, 255)',
   error: '#f21134',
 
   // typography
-  onPrimary: '#000',
-  onSecondary: '#fff',
-  onBackground: '#000',
-  onSurface: '#000',
-  onError: '#fff',
+  onPrimary: 'rgb(0, 0, 0)',
+  onSecondary: 'rgb(255, 255, 255)',
+  onBackground: 'rgb(0, 0, 0)',
+  onSurface: 'rgb(0, 0, 0)',
+  onError: 'rgb(255, 255, 255)',
+
+  //on RGBA
+  primaryRGB: '255, 255, 255',
+  secondaryRGB: '0, 0, 0',
+  backgroundRGB: '221, 221, 221',
+  surfaceRGB: '255, 255, 255',
+  errorRGB: '#f21134',
 };

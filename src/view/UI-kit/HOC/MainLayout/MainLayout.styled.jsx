@@ -5,6 +5,7 @@ const MainLayoutWrapper = styled.div`
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: ${themeGet('color.background')};
   
   // initial scale of content font-size
   @media (${themeGet('device.mobileS')}) {

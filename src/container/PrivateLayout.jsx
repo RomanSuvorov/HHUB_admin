@@ -23,7 +23,6 @@ export default function PrivateLayout({ component: Component, ...rest }) {
       headerComponent={<Header />}
       footerComponent={<Footer />}
       asideVisible={false}
-      asidePosition="left"
     >
       <RenderRoutes {...rest} />
     </MainLayout>
