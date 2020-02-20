@@ -7,6 +7,7 @@ const CustomButton = styled.button`
   align-items: center;
   height: 48px;
   outline: none;
+  cursor: pointer;
   
   ${props => 
   (props.bordered &&

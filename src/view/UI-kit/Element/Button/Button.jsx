@@ -15,7 +15,7 @@ export default function Button({
   inverseColor,
   onClick,
 }) {
-  const allClasses = ['container'];
+  const allClasses = ['button'];
 
   if (className) {
     allClasses.push(className);
@@ -31,11 +31,11 @@ export default function Button({
       bordered={bordered}
       inverseColor={inverseColor}
     >
-      {iconPosition === 'left' && (
+      {(iconPosition === 'left' && icon) && (
         <IconWrapper>{icon}</IconWrapper>
       )}
       <span>{label}</span>
-      {iconPosition === 'right' && (
+      {(iconPosition === 'right' && icon) && (
         <IconWrapper>{icon}</IconWrapper>
       )}
     </CustomButton>

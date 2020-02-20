@@ -1,38 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { HeadingWrapper } from './Heading.styled';
+import { TextWrapper } from './Text.styled';
 
-export default function Heading({
+export default function Text({
   id,
   className,
   content,
   as,
 }) {
-  const allClasses = ['heading'];
+  const allClasses = ['text'];
 
   if (className) {
     allClasses.push(className);
   }
 
   return (
-    <HeadingWrapper
+    <TextWrapper
       id={id}
       className={allClasses.join(' ')}
       as={as}
     >
       {content}
-    </HeadingWrapper>
+    </TextWrapper>
   );
 }
 
-Heading.propTypes = {
+Text.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   content: PropTypes.string,
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  as: PropTypes.oneOf(['span', 'p']),
 };
 
-Heading.defaultProps = {
-  as: 'h2',
+Text.defaultProps = {
+  as: 'p',
 };
