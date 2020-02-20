@@ -5,6 +5,10 @@ export default {
   surface: 'rgb(255, 255, 255)',
   error: '#f21134',
 
+  // state
+  disabled: 'rgb(216, 216, 216)',
+  onDisabled: 'rgb(170, 170, 170)',
+
   // typography
   onPrimary: 'rgb(0, 0, 0)',
   onSecondary: 'rgb(255, 255, 255)',
