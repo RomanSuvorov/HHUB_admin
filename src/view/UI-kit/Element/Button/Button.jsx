@@ -60,7 +60,7 @@ Button.defaultProps = {
   disabled: false,
   icon: null,
   iconPosition: 'right',
-  bordered: false,
+  bordered: true,
   inverseColor: false,
   onClick: () => {},
 };

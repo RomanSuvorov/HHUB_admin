@@ -1,13 +1,15 @@
 export default {
   primary: 'rgb(255, 255, 255)',
-  secondary: 'rgb(0, 0, 0)',
-  background: 'rgb(221, 221, 221)',
+  secondary: 'rgb(11,11,11)',
+  background: 'rgb(30,30,30)',
   surface: 'rgb(255, 255, 255)',
-  error: '#f21134',
+  error: 'rgb(242, 17, 52)',
 
   // state
   disabled: 'rgb(216, 216, 216)',
   onDisabled: 'rgb(170, 170, 170)',
+  active: 'rgb(54, 171, 129)',
+  onActive: 'rgb(255, 255, 255)',
 
   // typography
   onPrimary: 'rgb(0, 0, 0)',
@@ -21,5 +23,7 @@ export default {
   secondaryRGB: '0, 0, 0',
   backgroundRGB: '221, 221, 221',
   surfaceRGB: '255, 255, 255',
-  errorRGB: '#f21134',
+  errorRGB: '242, 17, 52',
+  disabledRGB: '216, 216, 216',
+  activeRGB: '54, 171, 129',
 };

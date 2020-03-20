@@ -10,8 +10,7 @@ import {
 export default function OneFieldCard({
   heading,
   description,
-  inputField,
-  buttons,
+  simpleForm,
   className,
   id,
   width,
@@ -40,11 +39,8 @@ export default function OneFieldCard({
         styles={contentStyles}
       >
         {description}
-        {inputField}
+        {simpleForm}
       </ContentWrapper>
-      <BottomWrapper>
-        {buttons}
-      </BottomWrapper>
     </OneFieldCardWrapper>
   )
 }

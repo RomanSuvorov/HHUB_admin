@@ -38,11 +38,11 @@ const MainLayoutWrapper = styled.div`
   
   // structure unit relative font-size scale
   & ${props => props.h1} {
-    font-size: ${themeGet('font.size.h1')};
+    font-size: ${themeGet('elements.h1.fontSize')};
   }
   
   & ${props => props.h2} {
-    font-size: ${themeGet('font.size.h2')};
+    font-size: ${themeGet('elements.h2.fontSize')};
   }
   
   & ${props => props.subTitle1} {

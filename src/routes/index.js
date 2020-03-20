@@ -3,15 +3,15 @@ import React from 'react';
 import {
   Route,
   Switch,
+  Redirect,
 } from 'react-router-dom';
 
-import PrivateLayout from '../container/PrivateLayout';
 import { Login, Dashboard } from '../view/pages';
 
-const ROUTES = [
+export const PUBLIC_ROUTES = [
   {
     path: '/',
-    key: 'APP',
+    key: 'APP_LOGIN_DEFAULT',
     exact: true,
     component: Login,
   },
@@ -21,34 +21,56 @@ const ROUTES = [
     exact: true,
     component: Login,
   },
+];
+
+export const REGISTER_PRIVATE_ROUTES = [
   {
-    path: '/home',
-    key: 'APP_DASHBOARD',
-    component: PrivateLayout,
-    routes: [
-      {
-        path: '/home/',
-        key: 'APP_HOME_DASHBOARD',
-        exact: true,
-        component: Dashboard,
-      },
-      {
-        path: '/home/dashboard',
-        key: 'APP_HOME_DASHBOARD',
-        exact: true,
-        component: Dashboard,
-      },
-      {
-        path: '/home/profile',
-        key: 'APP_HOME_PROFILE',
-        exact: true,
-        component: () => <h1>Profile</h1>,
-      },
-    ],
+    path: '/',
+    key: 'APP_REGISTER',
+    exact: true,
+    component: Login,
   },
 ];
 
-export default ROUTES;
+export const IS_REGISTERED_PRIVATE_ROUTES = [
+  {
+    path: '/',
+    key: 'APP_HOME_DEFAULT',
+    exact: true,
+    component: Dashboard,
+  },
+  {
+    path: '/dashboard',
+    key: 'APP_HOME_DASHBOARD',
+    exact: true,
+    component: Dashboard,
+  },
+  {
+    path: '/profile',
+    key: 'APP_HOME_PROFILE',
+    exact: true,
+    component: () => <h1>Profile</h1>,
+  },
+];
+
+export const IS_ADMIN_PRIVATE_ROUTES = [
+  ...IS_REGISTERED_PRIVATE_ROUTES,
+  {
+    path: '/admin',
+    key: 'ADMIN_ROUTES',
+    exact: true,
+    component: () => <h1>Admin Panel</h1>,
+  },
+];
+
+export const IS_BANNED_ROUTES = [
+  {
+    path: '/',
+    key: 'BANNED_ROUTES',
+    exact: true,
+    component: () => <h1>You Are Banned</h1>,
+  },
+];
 
 function RouteWithSubRoutes(route) {
   return (
@@ -66,7 +88,7 @@ export function RenderRoutes({ routes }) {
       {
         routes.map(route => <RouteWithSubRoutes key={route.key}  {...route} />)
       }
-      <Route component={() => <h1>Not Found!</h1>} />
+      <Redirect to={'/'} />
     </Switch>
   )
 }

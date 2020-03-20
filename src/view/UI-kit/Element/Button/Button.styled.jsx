@@ -3,11 +3,18 @@ import { themeGet } from '@styled-system/theme-get';
 
 const CustomButton = styled.button`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 48px;
   outline: none;
   cursor: pointer;
+  min-width: 150px;
+ ${props =>
+  (props.icon &&
+  css`
+    justify-content: space-between;`) ||
+  css`
+    justify-content: center;
+  `}
   
   ${props => 
   (props.bordered &&
@@ -39,8 +46,20 @@ const CustomButton = styled.button`
   
   &:disabled,
   &:disabled:hover {
+    transition: all 0.3s;
     background-color: ${themeGet('color.disabled')};
     color: ${themeGet('color.onDisabled')};
+    cursor:not-allowed;
+    ${props =>
+    (props.bordered &&
+    css`
+    border-color: ${themeGet('color.onDisabled')}`) ||
+    css`
+    border-color: ${themeGet('color.secondary')}
+    `};
+    & svg path {
+      fill: ${themeGet('color.onDisabled')};
+    }
   }
   
   &:hover {
@@ -48,20 +67,25 @@ const CustomButton = styled.button`
     ${props =>
     (props.inverseColor &&
     css`
-    color: ${themeGet('color.secondary')};
-    background-color: ${themeGet('color.onSecondary')};`) ||
-    css`
     color: ${themeGet('color.primary')};
-    background-color: ${themeGet('color.onPrimary')};
+    background-color: ${themeGet('color.active')};`) ||
+    css`
+    color: ${themeGet('color.active')};
+    ${props =>
+    props.bordered &&
+    css`
+    border-color: ${themeGet('color.active')}`};
+    background-color: ${themeGet('color.primary')};
     `};
     
     & svg path {
+      transition: all 0.3s;
       ${props =>
       (props.inverseColor &&
       css`
-      fill: ${themeGet('color.onPrimary')};`) ||
+      fill: ${themeGet('color.onActive')};`) ||
       css`
-      fill: ${themeGet('color.onSecondary')};
+      fill: ${themeGet('color.active')};
       `};
     }
   }

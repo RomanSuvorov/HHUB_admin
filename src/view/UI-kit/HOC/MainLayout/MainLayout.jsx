@@ -44,7 +44,7 @@ export default function MainLayout({
       {navigationVisible && navigationComponent}
       <MainContentWrapper>
         {asideVisible && asidePosition === 'left' && asideComponent}
-        <Container>
+        <Container styles={{ backgroundColor: 'color.body' }}>
           {children}
         </Container>
         {asideVisible && asidePosition === 'right' && asideComponent}

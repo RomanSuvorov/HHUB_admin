@@ -8,7 +8,7 @@ const ContainerWrapper = styled.div`
   box-sizing: border-box;
   ${props =>
   props.styles && props.styles.backgroundColor &&
-  css`background-color: ${props.styles.backgroundColor}` ||
+  css`background-color: ${themeGet(props.styles.backgroundColor)}` ||
     css`background-color: ${themeGet('color.primary')};`
   }
   ${props =>

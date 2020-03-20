@@ -3,6 +3,7 @@ import device from './device';
 import font from './font';
 import opacity from './opacity';
 import size from './size';
+import elements from './elements';
 
 export default {
   color,
@@ -10,4 +11,5 @@ export default {
   font,
   opacity,
   size,
+  elements,
 };

@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get';
 const OneFieldCardWrapper = styled.div`
   display: flex;
   margin: 0 auto;
+  padding: 32px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,19 +15,18 @@ const OneFieldCardWrapper = styled.div`
 `;
 
 const HeadingWrapper = styled.div`
-  padding: 16px;
   border-bottom: ${themeGet('color.secondary')};
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 8px;
   ${props => props.styles}
 `;
 
 const BottomWrapper = styled.div`
-  padding: 16px;
+  padding-top: 16px;
   border-top: ${themeGet('color.secondary')};
 `;
 

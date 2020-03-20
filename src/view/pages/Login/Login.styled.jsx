@@ -7,22 +7,22 @@ const loginCardStyle = css`
   max-height: 90%;
   width: 100%;
   @media(${themeGet('device.mobileM')}) {
-    max-width: 350px;
+    max-width: 320px;
     box-shadow: 0 0 16px 8px ${themeGet('opacity.opacitySecondary16')};
   }
   @media(${themeGet('device.mobileL')}) {
-    max-width: 400px;
+    max-width: 320px;
   }
   @media(${themeGet('device.tablet')}) {
-    max-width: 565px;
+    max-width: 400px;
   }
   @media(${themeGet('device.laptopL')}) {
-    max-width: 768px;
+    max-width: 450px;
   }
 `;
 
 const loginCardContentStyle = css`
-  
+  align-items: center;
 `;
 
 const LoginWrapper = styled.div`
