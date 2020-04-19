@@ -54,7 +54,7 @@ export default {
 
   },
   button: {
-    fontSize: '0.4em',
+    fontSize: '0.8em',
     fontWeight: 'bold',
   },
   // <a>
@@ -63,15 +63,15 @@ export default {
   },
   infoString: {
     fontFamily: '',
-    fontSize: '0.5em',
+    fontSize: '0.8em',
     fontWeight: '300',
-    textAlign: 'center',
+    textAlign: 'left',
     lineHeight: '24px',
-    letterSpacing: '0.01',
+    letterSpacing: '0.01em',
   },
   errorString: {
     fontFamily: '',
-    fontSize: '0.8em',
+    fontSize: '0.em',
     fontWeight: '300',
     textAlign: 'left',
     lineHeight: '28px',

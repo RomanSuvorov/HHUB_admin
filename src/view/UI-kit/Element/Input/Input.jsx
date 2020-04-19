@@ -87,7 +87,8 @@ function Input({
 
   const InfoField = infoMessage && (
     <InfoControl>
-      {infoMessage}
+      <i className="material-icons material-icons-outlined md-light">info</i>
+      <span>{infoMessage}</span>
     </InfoControl>
   );
 

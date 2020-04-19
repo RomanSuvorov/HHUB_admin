@@ -17,7 +17,7 @@ export default {
     h6: '1em',
     subtitle1: '1.1em',
     subtitle2: '1em',
-    body1: '1em',
+    body1: '0.8em',
     body2: '1em',
     button: '1em',
     caption: '1em',

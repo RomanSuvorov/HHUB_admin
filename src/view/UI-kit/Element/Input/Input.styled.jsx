@@ -124,13 +124,22 @@ const LabelControl = styled.label`
 `;
 
 const InfoControl = styled.div`
-  font-size: ${themeGet('elements.infoString.fontSize')};
-  line-height: ${themeGet('elements.infoString.lineHeight')};
-  font-weight: ${themeGet('elements.infoString.fontWeight')};
-  letter-spacing: ${themeGet('elements.infoString.letterSpacing')};
-  text-align: ${themeGet('elements.infoString.textAlign')};
-  color: ${themeGet('opacity.opacityPrimary72')};
+  display: flex;
+  align-items: center;
   margin-top: 8px;
+  
+  & i {
+    margin-right: 8px;
+  }
+
+  & span {
+    font-size: ${themeGet('elements.infoString.fontSize')};
+    line-height: ${themeGet('elements.infoString.lineHeight')};
+    font-weight: ${themeGet('elements.infoString.fontWeight')};
+    letter-spacing: ${themeGet('elements.infoString.letterSpacing')};
+    text-align: ${themeGet('elements.infoString.textAlign')};
+    color: ${themeGet('opacity.opacityPrimary72')};
+  }
 `;
 
 const ErrorControl = styled.div`

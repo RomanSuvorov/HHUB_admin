@@ -20,6 +20,7 @@ const ButtonWrapper = styled.div`
   align-items: center;
   width: 70%;
   margin: 0 -8px;
+  z-index: 1;
   
   & button.button {
     width: 100%;
