@@ -6,6 +6,7 @@ export default {
   opacityPrimary24: `rgba(${color.primaryRGB}, 0.24)`,
   opacityPrimary32: `rgba(${color.primaryRGB}, 0.32)`,
   opacityPrimary56: `rgba(${color.primaryRGB}, 0.56)`,
+  opacityPrimary72: `rgba(${color.primaryRGB}, 0.72)`,
 
   opacitySecondary8: `rgba(${color.secondaryRGB}, 0.08)`,
   opacitySecondary16: `rgba(${color.secondaryRGB}, 0.16)`,

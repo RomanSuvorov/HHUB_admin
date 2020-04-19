@@ -11,6 +11,7 @@ const FormControl = styled.div`
   display: inline-flex;
   flex-direction: column;
   vertical-align: top;
+  width: 100%;
 `;
 
 const BasedControl = styled.div`
@@ -19,14 +20,13 @@ const BasedControl = styled.div`
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
-  color: ${themeGet('color.primaryColor')};
   cursor: text;
   font-size: 1rem;
   
   & > input {
     padding: 15px 14px;
     font: inherit;
-    color: currentColor;
+    color: ${themeGet('color.primary')};
     width: 100%;
     min-width: 0;
     background: none;
@@ -56,7 +56,7 @@ const BasedControl = styled.div`
     position: absolute;
     border-style: solid;
     border-width: 1px;
-    border-color: ${themeGet('opacity.opacitySecondary24')};
+    border-color: ${themeGet('opacity.opacityPrimary24')};
     border-radius: inherit;
     pointer-events: none;
     
@@ -100,7 +100,7 @@ const LabelControl = styled.label`
   top: 0;
   left: 0;
   display: block;
-  color: ${themeGet('opacity.opacitySecondary56')};
+  color: ${themeGet('opacity.opacityPrimary56')};
   z-index: 1;
   padding: 0;
   font-size: 1rem;
@@ -129,15 +129,17 @@ const InfoControl = styled.div`
   font-weight: ${themeGet('elements.infoString.fontWeight')};
   letter-spacing: ${themeGet('elements.infoString.letterSpacing')};
   text-align: ${themeGet('elements.infoString.textAlign')};
+  color: ${themeGet('opacity.opacityPrimary72')};
+  margin-top: 8px;
 `;
 
 const ErrorControl = styled.div`
-  color: ${themeGet('color.error')};
   font-size: ${themeGet('elements.errorString.fontSize')};
   line-height: ${themeGet('elements.errorString.lineHeight')};
   font-weight: ${themeGet('elements.errorString.fontWeight')};
   letter-spacing: ${themeGet('elements.errorString.letterSpacing')};
   text-align: ${themeGet('elements.errorString.textAlign')};
+  color: ${themeGet('color.error')};
 `;
 
 export {

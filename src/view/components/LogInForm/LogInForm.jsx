@@ -5,12 +5,14 @@ import { Field, reduxForm } from 'redux-form';
 import Button from '../../UI-kit/Element/Button';
 import { ReduxFormInput } from '../../UI-kit/Element/Input';
 import { ArrowLeft, ArrowRight } from '../../../assets/iconComponents';
+import SmallHHLogo from '../../../assets/image/logo_hh_small.svg';
 import { normalizer, validator } from '../../../sdk/utils';
 
 import {
   FormWrapper,
   FieldRow,
   ButtonWrapper,
+  FormIcon,
 } from './LogInForm.styled';
 
 let LogInForm = ({
@@ -31,7 +33,7 @@ let LogInForm = ({
             name="phoneNumber"
             type="tel"
             component={ReduxFormInput}
-            infoMessage={"Format: +380*********"}
+            infoMessage={"Формат: +380 88 88 88 888"}
             label="Номер телефона"
             normalize={normalizer.phone}
             autoFocus={true}
@@ -91,6 +93,7 @@ let LogInForm = ({
 
   return (
     <FormWrapper onSubmit={handleSubmit((values) => validator(values, mode, onSubmit))}>
+      <FormIcon icon={SmallHHLogo} className="formIcon" />
       {Form}
     </FormWrapper>
   );

@@ -1,38 +1,84 @@
 import styled, { css } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
-
-const loginCardStyle = css`
-  max-width: unset;
-  box-shadow: none;
-  max-height: 90%;
-  width: 100%;
-  @media(${themeGet('device.mobileM')}) {
-    max-width: 320px;
-    box-shadow: 0 0 16px 8px ${themeGet('opacity.opacitySecondary16')};
-  }
-  @media(${themeGet('device.mobileL')}) {
-    max-width: 320px;
-  }
-  @media(${themeGet('device.tablet')}) {
-    max-width: 400px;
-  }
-  @media(${themeGet('device.laptopL')}) {
-    max-width: 450px;
-  }
-`;
-
-const loginCardContentStyle = css`
-  align-items: center;
-`;
+import LoginBGImage from '../../../assets/image/backgroundImage.png';
 
 const LoginWrapper = styled.div`
   display: flex;
+  background-image: url(${LoginBGImage});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   align-items: center;
-  height: 100%;
+  
+  & .loginContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
+const BoxWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px 60px;
+  border-radius: 5px;
+  
+  &.welcomeBox {
+    width: 100%;
+    max-width: 668px;
+    box-sizing: border-box;
+    
+    & .welcomeBox {
+      &_heading {
+        color: ${themeGet('color.primary')};
+        text-transform: uppercase;
+        z-index: 1;
+      }
+      
+      &_videoBox {
+        border: 2px solid ${themeGet('color.primary')};
+        border-radius: 5px;
+        z-index: 1;
+        margin-bottom: 16px;
+        
+        &:hover {
+          border-color: ${themeGet('color.active')};
+        }
+      }
+      
+      &_title {
+        width: 100%;
+        color: ${themeGet('color.primary')};
+        justify-self: self-start;
+        z-index: 1;
+      }
+      
+      &_description {
+        color: ${themeGet('color.primary')};
+        z-index: 1;
+      }
+    }
+  }
+  
+  &.formBox {
+    width: 30%;
+  }
+`;
+
+const BlurBackground = styled.div`
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: ${themeGet('opacity.opacityPrimary8')};
+  position: absolute;
+  border-radius: 5px;
 `;
 
 export {
-  loginCardStyle,
-  loginCardContentStyle,
   LoginWrapper,
+  BoxWrapper,
+  BlurBackground,
 };

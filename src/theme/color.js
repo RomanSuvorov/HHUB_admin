@@ -8,7 +8,7 @@ export default {
   // state
   disabled: 'rgb(216, 216, 216)',
   onDisabled: 'rgb(170, 170, 170)',
-  active: 'rgb(54, 171, 129)',
+  active: 'rgb(255, 122, 0)',
   onActive: 'rgb(255, 255, 255)',
 
   // typography
@@ -25,5 +25,5 @@ export default {
   surfaceRGB: '255, 255, 255',
   errorRGB: '242, 17, 52',
   disabledRGB: '216, 216, 216',
-  activeRGB: '54, 171, 129',
+  activeRGB: '255, 122, 0',
 };

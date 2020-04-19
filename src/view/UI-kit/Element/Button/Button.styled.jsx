@@ -8,6 +8,9 @@ const CustomButton = styled.button`
   outline: none;
   cursor: pointer;
   min-width: 150px;
+  text-transform: uppercase;
+  font-size: ${themeGet('elements.button.fontSize')};
+  font-weight: ${themeGet('elements.button.fontWeight')};
  ${props =>
   (props.icon &&
   css`
@@ -19,7 +22,9 @@ const CustomButton = styled.button`
   ${props => 
   (props.bordered &&
   css`
-  border: 2px solid ${themeGet('color.secondary')};`) ||
+  border: 2px solid ${themeGet('color.active')};
+  border-radius: 5px;
+  `) ||
   css`
   border: none;
   `};
@@ -30,8 +35,8 @@ const CustomButton = styled.button`
   color: ${themeGet('color.primary')};
   background-color: ${themeGet('color.onPrimary')};`) ||
   css`
-  color: ${themeGet('color.secondary')};
-  background-color: ${themeGet('color.onSecondary')};
+  color: ${themeGet('color.onActive')};
+  background-color: ${themeGet('color.active')};
   `};
   
   & svg path {
@@ -40,7 +45,7 @@ const CustomButton = styled.button`
     css`
     fill: ${themeGet('color.onSecondary')};`) ||
     css`
-    fill: ${themeGet('color.onPrimary')};
+    fill: ${themeGet('color.onActive')};
     `};
   }
   

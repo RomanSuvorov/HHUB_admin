@@ -54,7 +54,8 @@ export default {
 
   },
   button: {
-
+    fontSize: '0.4em',
+    fontWeight: 'bold',
   },
   // <a>
   link: {
@@ -62,9 +63,9 @@ export default {
   },
   infoString: {
     fontFamily: '',
-    fontSize: '0.8em',
+    fontSize: '0.5em',
     fontWeight: '300',
-    textAlign: 'left',
+    textAlign: 'center',
     lineHeight: '24px',
     letterSpacing: '0.01',
   },

@@ -1,12 +1,12 @@
 export default {
   queryScale: {
     mobileS: '1em',
-    mobileM: '1.1em',
-    mobileL: '1.2em',
-    tablet: '1.4em',
-    laptop: '1.6em',
-    laptopL: '1.8em',
-    desktop: '2.4em',
+    mobileM: '1em',
+    mobileL: '1.05em',
+    tablet: '1.1em',
+    laptop: '1.15em',
+    laptopL: '1.2em',
+    desktop: '1.6em',
   },
   size: {
     h1: '1.5em',
@@ -35,6 +35,7 @@ export default {
     'bold-900': '900',
   },
   family: {
-
+    RobotoMono: '"Roboto Mono", monospace',
+    RobotoCondensed: '"Roboto Condensed", sans-serif',
   },
 };

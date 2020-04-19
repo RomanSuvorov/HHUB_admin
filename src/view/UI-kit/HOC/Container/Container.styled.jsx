@@ -9,7 +9,7 @@ const ContainerWrapper = styled.div`
   ${props =>
   props.styles && props.styles.backgroundColor &&
   css`background-color: ${themeGet(props.styles.backgroundColor)}` ||
-    css`background-color: ${themeGet('color.primary')};`
+    css`background-color: transparent;`
   }
   ${props =>
   props.fullWidth &&

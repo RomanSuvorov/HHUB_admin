@@ -6,6 +6,11 @@ const MainLayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${themeGet('color.background')};
+  font-family: ${themeGet('font.family.RobotoMono')};
+  
+  & h1, h2, h3, h4, h5, h6 {
+    font-family: ${themeGet('font.family.RobotoCondensed')};
+  }
   
   // initial scale of content font-size
   @media (${themeGet('device.mobileS')}) {

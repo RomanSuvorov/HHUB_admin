@@ -49,11 +49,7 @@ class Delegate extends Component {
               <RenderRoutes routes={PRIVATE_ROUTES} />
             </MainLayout>
           ) : (
-            <MainLayout
-              headerComponent={<Header />}
-              footerComponent={<Footer />}
-              asideVisible={false}
-            >
+            <MainLayout asideVisible={false}>
               <RenderRoutes routes={PUBLIC_ROUTES} />
             </MainLayout>
           )

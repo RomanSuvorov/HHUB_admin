@@ -5,8 +5,6 @@ import {
   MainContentWrapper,
 } from './MainLayout.styled';
 
-import Container from '../Container/Container';
-
 export default function MainLayout({
   headerComponent,
   headerVisible,
@@ -44,9 +42,7 @@ export default function MainLayout({
       {navigationVisible && navigationComponent}
       <MainContentWrapper>
         {asideVisible && asidePosition === 'left' && asideComponent}
-        <Container styles={{ backgroundColor: 'color.body' }}>
-          {children}
-        </Container>
+        {children}
         {asideVisible && asidePosition === 'right' && asideComponent}
       </MainContentWrapper>
       {footerVisible && footerComponent}
