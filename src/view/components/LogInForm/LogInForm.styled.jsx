@@ -16,6 +16,7 @@ const FieldRow = styled.div`
 
 const ButtonWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -27,8 +28,35 @@ const ButtonWrapper = styled.div`
   }
 `;
 
+const SendAgainBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0.5em;
+  
+  & .sendAgain {
+    &_text {
+      color: ${themeGet('color.primary')};
+    }
+    
+    &_button {
+      color: ${themeGet('color.primary')};
+      border: none;
+      background-color: transparent;
+      font-size: inherit;
+      margin-bottom: 1em;
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        color: ${themeGet('color.active')};
+      }
+    }
+  }
+`;
+
 export {
   FormWrapper,
   FieldRow,
   ButtonWrapper,
+  SendAgainBox,
 };

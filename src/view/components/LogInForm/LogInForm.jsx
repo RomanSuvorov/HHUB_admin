@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 
 import Button from '../../UI-kit/Element/Button';
+import Text from '../../UI-kit/Element/Text';
 import { ReduxFormInput } from '../../UI-kit/Element/Input';
-import { ArrowLeft, ArrowRight } from '../../../assets/iconComponents';
 import { normalizer, validator } from '../../../sdk/utils';
 
 import {
   FormWrapper,
   FieldRow,
   ButtonWrapper,
+  SendAgainBox,
 } from './LogInForm.styled';
 
 let LogInForm = ({
@@ -73,16 +74,8 @@ let LogInForm = ({
 
         <ButtonWrapper>
           <Button
-            type="button"
-            label="Ввести номер повторно"
-            inverseColor={true}
-            icon={<ArrowLeft />}
-            iconPosition="left"
-            onClick={onGoBackHandler}
-          />
-          <Button
             type="submit"
-            label="Ввойти"
+            label="Вход в систему"
             bordered={true}
             icon={
               <i className={`
@@ -95,6 +88,19 @@ let LogInForm = ({
             iconPosition="right"
             disabled={!valid || pristine || submitting}
           />
+          <SendAgainBox>
+            <Text
+              content="Не пришел код?"
+              className="sendAgain_text"
+            />
+            <Text
+              content="Повторить попытку"
+              className="sendAgain_button"
+              as="button"
+              onClick={onGoBackHandler}
+
+            />
+          </SendAgainBox>
         </ButtonWrapper>
       </>
     )
