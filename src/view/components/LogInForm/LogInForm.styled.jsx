@@ -10,15 +10,15 @@ const FormWrapper = styled.form`
 `;
 
 const FieldRow = styled.div`
-  margin-bottom: 24px;
-  width: 70%;
+  margin-bottom: 1em;
+  width: 100%;
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: 0 -8px;
   z-index: 1;
   
@@ -27,21 +27,8 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const FormIcon = styled.div`
-  ${props =>
-  css`
-  background-image: url(${props.icon});
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  `
-  };
-  margin-bottom: 24px;
-`;
-
 export {
   FormWrapper,
   FieldRow,
   ButtonWrapper,
-  FormIcon,
 };

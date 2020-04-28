@@ -5,14 +5,12 @@ import { Field, reduxForm } from 'redux-form';
 import Button from '../../UI-kit/Element/Button';
 import { ReduxFormInput } from '../../UI-kit/Element/Input';
 import { ArrowLeft, ArrowRight } from '../../../assets/iconComponents';
-import SmallHHLogo from '../../../assets/image/logo_hh_small.svg';
 import { normalizer, validator } from '../../../sdk/utils';
 
 import {
   FormWrapper,
   FieldRow,
   ButtonWrapper,
-  FormIcon,
 } from './LogInForm.styled';
 
 let LogInForm = ({
@@ -45,7 +43,14 @@ let LogInForm = ({
             type="submit"
             label="Получить код"
             bordered={true}
-            icon={<ArrowRight />}
+            icon={
+              <i className={`
+                material-icons
+                material-icons-outlined
+                md-light
+                ${(!valid || pristine || submitting) && 'md-inactive'}
+              `}>send</i>
+            }
             iconPosition="right"
             disabled={!valid || pristine || submitting}
           />
@@ -79,7 +84,14 @@ let LogInForm = ({
             type="submit"
             label="Ввойти"
             bordered={true}
-            icon={<ArrowRight />}
+            icon={
+              <i className={`
+                material-icons
+                material-icons-outlined
+                md-light
+                ${(!valid || pristine || submitting) && 'md-inactive'}
+              `}>exit_to_app</i>
+            }
             iconPosition="right"
             disabled={!valid || pristine || submitting}
           />
@@ -93,7 +105,6 @@ let LogInForm = ({
 
   return (
     <FormWrapper onSubmit={handleSubmit((values) => validator(values, mode, onSubmit))}>
-      <FormIcon icon={SmallHHLogo} className="formIcon" />
       {Form}
     </FormWrapper>
   );

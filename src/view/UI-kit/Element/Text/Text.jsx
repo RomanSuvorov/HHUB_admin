@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 
 import { TextWrapper } from './Text.styled';
 
-export default function Text({
+const Text = ({
   id,
   className,
   content,
   as,
-}) {
+  ...props
+}) => {
   const allClasses = ['text'];
 
   if (className) {
@@ -20,11 +21,12 @@ export default function Text({
       id={id}
       className={allClasses.join(' ')}
       as={as}
+      {...props}
     >
       {content}
     </TextWrapper>
   );
-}
+};
 
 Text.propTypes = {
   id: PropTypes.string,
@@ -36,3 +38,5 @@ Text.propTypes = {
 Text.defaultProps = {
   as: 'p',
 };
+
+export default Text;

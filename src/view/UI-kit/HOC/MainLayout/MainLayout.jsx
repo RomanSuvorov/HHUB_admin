@@ -33,8 +33,6 @@ export default function MainLayout({
       h4="h4"
       h5="h5"
       h6="h6"
-      subTitle1="p"
-      body1="span"
       id={id}
       className={allClasses.join(' ')}
     >

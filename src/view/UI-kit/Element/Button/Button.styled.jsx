@@ -3,6 +3,7 @@ import { themeGet } from '@styled-system/theme-get';
 
 const CustomButton = styled.button`
   display: flex;
+  position: relative;
   align-items: center;
   height: 48px;
   outline: none;
@@ -22,7 +23,7 @@ const CustomButton = styled.button`
   ${props => 
   (props.bordered &&
   css`
-  border: 2px solid ${themeGet('color.active')};
+  border: 2px solid ${themeGet('color.primary')};
   border-radius: 5px;
   `) ||
   css`
@@ -36,7 +37,7 @@ const CustomButton = styled.button`
   background-color: ${themeGet('color.onPrimary')};`) ||
   css`
   color: ${themeGet('color.onActive')};
-  background-color: ${themeGet('color.active')};
+  background-color: ${themeGet('color.secondary')};
   `};
   
   & svg path {
@@ -75,29 +76,29 @@ const CustomButton = styled.button`
     color: ${themeGet('color.primary')};
     background-color: ${themeGet('color.active')};`) ||
     css`
-    color: ${themeGet('color.active')};
+    color: ${themeGet('color.onActive')};
     ${props =>
     props.bordered &&
     css`
-    border-color: ${themeGet('color.active')}`};
-    background-color: ${themeGet('color.primary')};
+    border-color: ${themeGet('color.primary')}`};
+    background-color: ${themeGet('color.active')};
     `};
     
     & svg path {
       transition: all 0.3s;
       ${props =>
-      (props.inverseColor &&
+      props.inverseColor &&
       css`
-      fill: ${themeGet('color.onActive')};`) ||
-      css`
-      fill: ${themeGet('color.active')};
-      `};
+      fill: ${themeGet('color.onActive')};`
+      };
     }
   }
 `;
 
 const IconWrapper = styled.div`
   padding: 8px;
+  position: absolute;
+  right: 20px;
 `;
 
 export {

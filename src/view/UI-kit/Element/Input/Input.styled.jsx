@@ -21,7 +21,7 @@ const BasedControl = styled.div`
   align-items: center;
   box-sizing: border-box;
   cursor: text;
-  font-size: 1rem;
+  font-size: 1em;
   
   & > input {
     padding: 15px 14px;
@@ -56,7 +56,7 @@ const BasedControl = styled.div`
     position: absolute;
     border-style: solid;
     border-width: 1px;
-    border-color: ${themeGet('opacity.opacityPrimary24')};
+    border-color: ${themeGet('color.primary')};
     border-radius: inherit;
     pointer-events: none;
     
@@ -68,7 +68,7 @@ const BasedControl = styled.div`
       max-width: 0.01px;
       transition: max-width 0.05s cubic-bezier(0, 0, 0.2, 1) 0ms;
       visibility: hidden;
-      font-size: 0.75em;
+      font-size: 1em;
       
       & > span {
         padding: 0 5px;
@@ -103,15 +103,16 @@ const LabelControl = styled.label`
   color: ${themeGet('opacity.opacityPrimary56')};
   z-index: 1;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1em;
   pointer-events: none;
   transform-origin: top left;
   transform: translate(14px, 14px) scale(1);
-  transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1);
   
   ${FormControl}.isFocused & {
-    transform: translate(14px, -6px) scale(0.75);
+    transform: translate(14px, -6px);
     color: ${themeGet('color.active')};
+    font-size: ${themeGet('elements.infoString.fontSize')};
   }
   
   ${FormControl}.isDisabled & {
@@ -138,7 +139,7 @@ const InfoControl = styled.div`
     font-weight: ${themeGet('elements.infoString.fontWeight')};
     letter-spacing: ${themeGet('elements.infoString.letterSpacing')};
     text-align: ${themeGet('elements.infoString.textAlign')};
-    color: ${themeGet('opacity.opacityPrimary72')};
+    color: ${themeGet('color.primary')};
   }
 `;
 

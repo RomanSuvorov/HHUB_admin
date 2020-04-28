@@ -1,7 +1,7 @@
 export default {
   h1: {
     fontFamily: '',
-    fontSize: '1.5em',
+    fontSize: '1.6em',
     fontWeight: '',
     textAlign: '',
     lineHeight: '',
@@ -9,7 +9,7 @@ export default {
   },
   h2: {
     fontFamily: '',
-    fontSize: '1.2em',
+    fontSize: '1.4em',
     fontWeight: '',
     textAlign: '',
     lineHeight: '',
@@ -17,7 +17,7 @@ export default {
   },
   h3: {
     fontFamily: '',
-    fontSize: '1em',
+    fontSize: '1.3em',
     fontWeight: '',
     textAlign: '',
     lineHeight: '',
@@ -25,7 +25,7 @@ export default {
   },
   h4: {
     fontFamily: '',
-    fontSize: '1em',
+    fontSize: '1.2em',
     fontWeight: '',
     textAlign: '',
     lineHeight: '',
@@ -33,7 +33,7 @@ export default {
   },
   h5: {
     fontFamily: '',
-    fontSize: '1em',
+    fontSize: '1.1em',
     fontWeight: '',
     textAlign: '',
     lineHeight: '',

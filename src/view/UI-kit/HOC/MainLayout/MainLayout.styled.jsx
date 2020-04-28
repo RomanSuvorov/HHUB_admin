@@ -50,12 +50,20 @@ const MainLayoutWrapper = styled.div`
     font-size: ${themeGet('elements.h2.fontSize')};
   }
   
-  & ${props => props.subTitle1} {
-    font-size: ${themeGet('font.size.subTitle1')};
+  & ${props => props.h3} {
+    font-size: ${themeGet('elements.h3.fontSize')};
   }
   
-  & ${props => props.body1} {
-    font-size: ${themeGet('font.size.body1')};
+  & ${props => props.h4} {
+    font-size: ${themeGet('elements.h4.fontSize')};
+  }
+  
+  & ${props => props.h5} {
+    font-size: ${themeGet('elements.h5.fontSize')};
+  }
+  
+  & ${props => props.h6} {
+    font-size: ${themeGet('elements.h6.fontSize')};
   }
   
   /* Rules for sizing the icon. */
@@ -70,7 +78,7 @@ const MainLayoutWrapper = styled.div`
   
   /* Rules for using icons as white on a dark background. */
   .material-icons.md-light { color: rgba(255, 255, 255, 1); }
-  .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+  .material-icons.md-light.md-inactive { color: ${themeGet('color.onDisabled')}; }
 `;
 
 const MainContentWrapper = styled.section`
